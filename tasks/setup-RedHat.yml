@@ -1,0 +1,7 @@
+---
+- name: Ensure Apache is installed on RHEL.
+  yum:
+    name: "{{ apache_packages }}"
+    state: "{{ apache_packages_state }}"
+    # causes errors with latest Ansible Error setting/accessing repos
+    # enablerepo: "{{ apache_enablerepo }}"
